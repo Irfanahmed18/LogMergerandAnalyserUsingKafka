@@ -4,11 +4,12 @@
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type = "text/javascript" src="charting-script.js"></script>
+    <script src="charting-script.js"></script>
     <style>
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
@@ -57,8 +58,8 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active" id="home"><a href="#">Home</a></li>
-                <li><a href="#" id="about">Donut Chart</a></li>
+                <li id="home" class="active"><a href="#">Home</a></li>
+                <li id="about"><a href="#">Doughnut Chart</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -72,25 +73,36 @@
 <div class="container-fluid text-center">
     <div class="row content">
         <div class="col-sm-2 sidenav">
-            <p><a href="#">Link</a></p>
-            <p><a href="#">Link</a></p>
-            <p><a href="#">Link</a></p>
+            <p><a id="my-app-1" href="#">App 1</a></p>
+            <p><a id="my-app-2" href="#">App 2</a></p>
+            <p><a id="my-app-3" href="#">App 3</a></p>
         </div>
         <div class="col-sm-8 text-left">
             <h1>Welcome</h1>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Time Stamp</th>
+                    <th scope="col">Log Level</th>
+                    <th scope="col">Application Name</th>
+                    <th scope="col">Thread Id</th>
+                    <th scope="col">Logger</th>
+                    <th scope="col">Message</th>
+                <tr>
+
+                </thead>
+                <tbody id="myTable">
+                </tbody>
+            </table>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <hr>
             <div>
-                <canvas id="myChart"></canvas>
+                <canvas style="display: inline" id="myChart"></canvas>
+                <canvas  style="display: inline" id="myChart2"></canvas>
             </div>
         </div>
         <div class="col-sm-2 sidenav">
-            <div class="well">
-                <p>ADS</p>
-            </div>
-            <div class="well">
-                <p>ADS</p>
-            </div>
         </div>
     </div>
 </div>

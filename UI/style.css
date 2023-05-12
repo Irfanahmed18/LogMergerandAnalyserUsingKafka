@@ -1,0 +1,17 @@
+
+
+  .table tbody {
+        display: block;
+        max-height: 300px; /* adjust this height to suit your needs */
+        overflow-y: auto;
+      }
+
+      .table thead, .table tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      .table td {
+        word-wrap: break-word; /* this will wrap the text */
+      }
